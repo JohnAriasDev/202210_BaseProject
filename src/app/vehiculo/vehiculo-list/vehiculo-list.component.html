@@ -1,20 +1,55 @@
-<table class="table">
-<thead class="thead-dark">
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Marca</th>
-    <th scope="col">Línea</th>
-    <th scope="col">Modelo</th>
-  </tr>
-</thead>
-<tbody>
-  <div *ngFor="let vehiculo of vehiculos" >
-  <tr>
-    <th scope="row">{{vehiculo.id}}</th>
-    <td>{{vehiculo.marca}}</td>
-    <td>{{vehiculo.linea}}</td>
-    <td>{{vehiculo.modelo}}</td>
-  </tr>
-  </div>
-</tbody>
-</table>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Jaldi&display=swap');
+  </style>
+<div class="container">
+<h1>TuSegundazo.com</h1>
+<div class="linea"></div>
+<br>
+</div>
+<div class="container">
+  <img [src]="'assets/imagen.png'" class="imagen" alt="image">
+  <div class="linea"></div>
+</div>
+
+
+    <!-- Bootstrap CSS -->
+
+<br>
+
+  <div class="container">
+  <table class="table">
+      <thead class="thead-dark">
+        <tr class="row">
+          <th style="width:7% ">#</th>
+          <th style="width:15% ">Marca</th>
+          <th style="width:20% ">Línea</th>
+          <th style="width:30% ">Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <div *ngFor="let vehiculo of vehiculos" >
+
+          <tr class="row">
+          <th style="width:7% ">{{vehiculo.id}}</th>
+          <td style="width:15%">{{vehiculo.marca}}</td>
+          <td style="width:20%">{{vehiculo.linea}}</td>
+          <td style="width:30%">{{vehiculo.modelo}}</td>
+        </tr>
+        </div>
+      </tbody>
+      </table>
+
+      <div *ngFor="let item of contador | keyvalue">
+        Total {{ item.key }}:{{ item.value }}
+      </div>
+      <br>
+      <div class="foot">Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</div>
+
+    </div>
+
+
+
+
+
